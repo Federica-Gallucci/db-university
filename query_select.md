@@ -18,6 +18,19 @@ FROM `students`
 WHERE
 YEAR(`date_of_birth`) > 1995;
 
+oppure più in generale
+
+SELECT \*
+FROM `students`
+WHERE
+`date_of_birth` <= DATE_SUB(NOW(), INTERVAL 30 YEAR);
+
+## studenti che hanno esattamente 30 anni sono compresi tra queste due date
+
+SELECT
+DATE_SUB(NOW(), INTERVAL 30 YEAR)
+DATE_SUB(NOW(), INTERVAL 31 YEAR)
+
 4. Selezionare tutti i corsi del primo semestre del primo anno di un qualsiasi corso di
    laurea (286)
 
@@ -28,6 +41,11 @@ YEAR(`date_of_birth`) > 1995;
 
 5. Selezionare tutti gli appelli d'esame che avvengono nel pomeriggio (dopo le 14) del
    20/06/2020 (21)
+
+   SELECT \*
+   FROM
+   WHERE
+   AND
 
 6. Selezionare tutti i corsi di laurea magistrale (38)
 
